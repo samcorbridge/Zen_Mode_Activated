@@ -58,6 +58,12 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+     <Compile Include="Assets\MyStuff\BlowUp.cs" />
+     <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorLinear.cs" />
+     <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorMove.cs" />
+     <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorSelf.cs" />
+     <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorSpherical.cs" />
+     <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\rotation.cs" />
      <Compile Include="Assets\ParticlesFollowPath.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
@@ -106,6 +112,7 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
      <Compile Include="Assets\rotate.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+     <None Include="Assets\Particle Attractor by Moonflower Carnivore\Shaders\Particles Additive Intensify.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
      <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
@@ -146,6 +153,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+     <None Include="Assets\Particle Attractor by Moonflower Carnivore\Particle Attractor documentation.txt" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
