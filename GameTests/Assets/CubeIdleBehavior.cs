@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using NEW namespace;
+using RoboRyanTron.Unite2017.Events;
 
 // add event to the player, create it as an ONIDLE Event
 // add gameeventlistener to an object
 // need to create game events in the assets folder
 
-public class CubeIdleBehavior : StateMachineBehaviour {
+	public class CubeIdleBehavior : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
