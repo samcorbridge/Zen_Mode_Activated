@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 376e0c5f1e6a4a94e9c1c53c7a7368fd
+timeCreated: 1520403452
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - AttackExit: {fileID: 11400000, guid: 56200e5f8a2f2d74da05ce6281e17660, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
