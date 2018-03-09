@@ -1,6 +1,6 @@
 //Maya ASCII 2017ff05 scene
 //Name: SweetGenjiRobotModel.ma
-//Last modified: Thu, Mar 08, 2018 11:15:33 PM
+//Last modified: Thu, Mar 08, 2018 11:21:40 PM
 //Codeset: 1252
 requires maya "2017ff05";
 requires "stereoCamera" "10.0";
@@ -15,13 +15,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "0DA8A1D3-4F95-F395-10CD-57BD44039D76";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0.10339801345397959 14.827361894386799 30.257535894596867 ;
-	setAttr ".r" -type "double3" -16.538352742525205 -1801.4000000006035 1.4913301842360315e-016 ;
+	setAttr ".t" -type "double3" 10.502644231011294 11.380486655915778 13.353666061576622 ;
+	setAttr ".r" -type "double3" -20.13835274259344 -1767.8000000005452 9.3966567231913424e-016 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "654A35CE-454C-6A80-7DE0-43917DD98C4C";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 31.589076249673433;
+	setAttr ".coi" 18.597368666718097;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -94,7 +94,6 @@ createNode transform -n "GenjiBotGuy";
 	rename -uid "07F6434F-49E1-C766-BF6C-16A9A8376A06";
 createNode transform -n "Skeleton" -p "GenjiBotGuy";
 	rename -uid "9A037706-43BC-A78F-8EF3-92970D8E94B5";
-	setAttr ".v" no;
 createNode joint -n "IK_L_Arm_Jnt_3" -p "Skeleton";
 	rename -uid "EA60EF56-484C-57D9-C42A-1FBF0E001DE4";
 	setAttr ".v" no;
@@ -591,8 +590,7 @@ createNode parentConstraint -n "RK_L_Arm_Jnt4_parentConstraint1" -p "RK_L_Arm_Jn
 	setAttr ".tg[1].tot" -type "double3" 2.0157504554418892e-007 -1.1411383917803164e-006 
 		-1.807606164749842e-007 ;
 	setAttr ".tg[1].tor" -type "double3" 89.814475046137318 6.2627232985099699 12.736460262714568 ;
-	setAttr ".lr" -type "double3" -3.1479124612622952e-008 -1.7075424388949111e-007 
-		1.0428625622583704e-006 ;
+	setAttr ".lr" -type "double3" 1.1305877969264847e-014 -2.186631343506168e-015 3.155706598014583e-015 ;
 	setAttr ".rst" -type "double3" 1.7283884958464362 0 -8.8817841970012523e-016 ;
 	setAttr ".rsrr" -type "double3" 2.4848083448933705e-016 -4.5720473546038052e-015 
 		4.3981107704612689e-015 ;
@@ -758,7 +756,7 @@ createNode parentConstraint -n "RK_R_Arm_Jnt3_parentConstraint1" -p "RK_R_Arm_Jn
 	setAttr ".tg[1].tot" -type "double3" 1.0177352294249431e-009 5.0833470766065147e-009 
 		-3.0408016549188233e-008 ;
 	setAttr ".tg[1].tor" -type "double3" -89.624987249766349 -12.924790841324393 5.9441689409303633 ;
-	setAttr ".lr" -type "double3" 2.8411999975899656e-008 1.6984096664415244e-007 -1.0405182098276337e-006 ;
+	setAttr ".lr" -type "double3" 1.287130722654767e-014 -3.6775163504421918e-015 7.8768424533119907e-015 ;
 	setAttr ".rst" -type "double3" -1.7283399675769089 -1.8626177822334e-009 -0.012524236310448522 ;
 	setAttr ".rsrr" -type "double3" 7.8271462864141232e-015 9.9392333795734468e-017 
 		6.4853497801717023e-015 ;
@@ -3327,6 +3325,7 @@ createNode scaleConstraint -n "L_Hand_Jnt_scaleConstraint1" -p "L_Hand_Jnt";
 	setAttr -k on ".w0";
 createNode transform -n "Geo" -p "GenjiBotGuy";
 	rename -uid "5F3B1539-4D1B-F29A-CF77-0791DBB020A4";
+	setAttr ".v" no;
 createNode transform -n "Foot1" -p "Geo";
 	rename -uid "ED8E2318-4DE6-A835-750B-ADA9F7971E64";
 	setAttr ".rp" -type "double3" 1.3983558810153951 0.56813839588490622 0.49767560415747703 ;
@@ -27441,6 +27440,7 @@ createNode transform -n "L_Leg_Base_IK_Ctrl_Grp" -p "|GenjiBotGuy|Controls|IK_Co
 	setAttr ".t" -type "double3" 7.0374189575265387 0.97922086828739108 -3.1801078298476781e-008 ;
 createNode transform -n "L_Leg_Base_IK_Ctrl" -p "L_Leg_Base_IK_Ctrl_Grp";
 	rename -uid "9C1B53B7-4218-79F1-E874-A6A86A765D91";
+	setAttr -av ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
 	setAttr ".t" -type "double3" -5.637451639061692 0 0 ;
@@ -27588,8 +27588,17 @@ createNode transform -n "R_Leg_Base_IK_Ctrl_Grp" -p "|GenjiBotGuy|Controls|IK_Co
 	setAttr ".r" -type "double3" 89.999999809681 0 79.496930278330311 ;
 createNode transform -n "R_Leg_Base_IK_Ctrl" -p "R_Leg_Base_IK_Ctrl_Grp";
 	rename -uid "6934A185-4884-3142-CACB-A48F80CCCB7A";
+	setAttr -av ".v";
 	setAttr ".ove" yes;
 	setAttr ".ovc" 13;
+	setAttr ".t" -type "double3" -1.0276409391184917 1.8412134927815835e-008 -5.5429969405554465 ;
+	setAttr -av ".tx";
+	setAttr -av ".ty";
+	setAttr -av ".tz";
+	setAttr ".r" -type "double3" 3.1805546814635168e-015 -2.8492831465397256e-023 1.0265624413623474e-006 ;
+	setAttr -av ".rx";
+	setAttr -av ".ry";
+	setAttr -av ".rz";
 	setAttr ".rp" -type "double3" 0 3.3087224502121107e-024 0 ;
 	setAttr ".sp" -type "double3" 0 3.3087224502121107e-024 0 ;
 createNode nurbsCurve -n "R_Leg_Base_IK_CtrlShape" -p "R_Leg_Base_IK_Ctrl";
@@ -28845,6 +28854,10 @@ createNode transform -n "L_Hand_Ctrl_Grp1" -p "Controls";
 createNode transform -n "L_Hand_Ctrl" -p "L_Hand_Ctrl_Grp1";
 	rename -uid "EE147DD2-4603-438F-4828-0D92F44B2743";
 	setAttr ".r" -type "double3" 3.147961342216629e-008 1.7075434902319437e-007 -1.0428625286693382e-006 ;
+	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
+	setAttr -av ".sx";
+	setAttr -av ".sy";
+	setAttr -av ".sz";
 createNode nurbsCurve -n "L_Hand_CtrlShape" -p "L_Hand_Ctrl";
 	rename -uid "C40E55E5-4178-6FBC-648F-FF82C44B6B70";
 	setAttr -k off ".v";
@@ -29349,6 +29362,7 @@ createNode transform -n "R_Foot_1_Ctrl_Grp" -p "Controls";
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999978 0.99999999999999978 ;
 createNode transform -n "R_Foot_1_Ctrl" -p "R_Foot_1_Ctrl_Grp";
 	rename -uid "564EA598-455A-5C9E-2B56-B6918850AFB7";
+	setAttr -av ".v";
 	setAttr ".r" -type "double3" 6.426856128670988e-008 1.2303683390755297e-007 -1.0255281853414693e-006 ;
 	setAttr ".rp" -type "double3" 0 2.2204460492503131e-016 -4.4408920985006262e-016 ;
 	setAttr ".sp" -type "double3" 0 2.2204460492503131e-016 -4.4408920985006262e-016 ;
@@ -29644,7 +29658,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "F446C8C2-4AD1-4ADC-518C-DE808C0D26D4";
-	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
+	setAttr ".b" -type "string" "playbackOptions -min 1 -max 15 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
 createNode groupId -n "groupId13";
 	rename -uid "373ACFA1-4A19-EFE7-1C90-22BFCE7BA9B8";
