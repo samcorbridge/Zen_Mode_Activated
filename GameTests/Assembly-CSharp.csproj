@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AttackBehavior.cs" />
+     <Compile Include="Assets\CubeAnimsBehavior.cs" />
+     <Compile Include="Assets\CubeIdleBehavior.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -58,7 +61,11 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
+     <Compile Include="Assets\JOSHS STUFF\Scripts\rotate.cs" />
      <Compile Include="Assets\MyStuff\BlowUp.cs" />
+     <Compile Include="Assets\OnAttackExit.cs" />
+     <Compile Include="Assets\OnEnterBehavior.cs" />
+     <Compile Include="Assets\OnExitBehavior.cs" />
      <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorLinear.cs" />
      <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorMove.cs" />
      <Compile Include="Assets\Particle Attractor by Moonflower Carnivore\Scripts\particleAttractorSelf.cs" />
@@ -110,9 +117,37 @@
      <Compile Include="Assets\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
      <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
-     <Compile Include="Assets\rotate.cs" />
+     <Compile Include="Assets\StuffForAnthony\ScriptableObjects\CharacterDisplay.cs" />
+     <Compile Include="Assets\StuffForAnthony\ScriptableObjects\Characters.cs" />
+     <Compile Include="Assets\StuffForAnthony\TurnOff.cs" />
+     <Compile Include="Assets\UniteCode\Code\Elements\AttackElement.cs" />
+     <Compile Include="Assets\UniteCode\Code\Elements\Elemental.cs" />
+     <Compile Include="Assets\UniteCode\Code\Events\GameEvent.cs" />
+     <Compile Include="Assets\UniteCode\Code\Events\GameEventListener.cs" />
+     <Compile Include="Assets\UniteCode\Code\Sets\RuntimeSet.cs" />
+     <Compile Include="Assets\UniteCode\Code\Sets\Thing.cs" />
+     <Compile Include="Assets\UniteCode\Code\Sets\ThingDisabler.cs" />
+     <Compile Include="Assets\UniteCode\Code\Sets\ThingMonitor.cs" />
+     <Compile Include="Assets\UniteCode\Code\Sets\ThingRuntimeSet.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\AnimatorParameterSetter.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\AudioParameterSetter.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\AudioVolumeSetter.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\DamageDealer.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\FloatReference.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\FloatVariable.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\ImageFillSetter.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\KeyboardMover.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\SimpleUnitHealth.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\SliderSetter.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\StringVariable.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\TextReplacer.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\UnitHealth.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\UnityEventRaiser.cs" />
+     <Compile Include="Assets\UniteCode\Code\Variables\VariableAudioTrigger.cs" />
+     <Compile Include="Assets\VFX Stuff\Scripts\rotateMe.cs" />
      <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\Particle Attractor by Moonflower Carnivore\Shaders\Particles Additive Intensify.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Fog.shader" />
      <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
@@ -124,6 +159,7 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\ACES.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+     <None Include="Assets\VFX Stuff\VFX Materials, Textures, and Models\Material Images READ README\READ ME.txt" />
      <None Include="Assets\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Uber.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Blit.shader" />
@@ -132,11 +168,14 @@
      <None Include="Assets\PostProcessing\Resources\Shaders\FXAA3.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\MotionBlur.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
      <None Include="Assets\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Common.cginc" />
      <None Include="Assets\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
      <None Include="Assets\PostProcessing\Editor Resources\UI\Trackball.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+     <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\Bloom.cginc" />
      <None Include="Assets\PostProcessing\Resources\Shaders\TAA.shader" />
      <None Include="Assets\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
